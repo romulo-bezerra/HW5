@@ -104,7 +104,13 @@
 			<version>${eventuateTramVersion}</version>
 			<scope>compile</scope>
 		</dependency>
-		<!--<dependency>-->
+        <dependency>
+            <groupId>br.edu.ifpb</groupId>
+            <artifactId>producer</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--<dependency>-->
 			<!--<groupId>io.eventuate.local.java</groupId>-->
 			<!--<artifactId>eventuate-local-java-embedded-cdc-autoconfigure</artifactId>-->
 			<!--<version>${eventuateTramVersion}</version>-->

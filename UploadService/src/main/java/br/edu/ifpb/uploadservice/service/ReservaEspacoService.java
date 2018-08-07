@@ -1,5 +1,6 @@
 package br.edu.ifpb.uploadservice.service;
 
+import br.edu.ifpb.producer.events.ReservaEspacoExpirada;
 import br.edu.ifpb.uploadservice.config.UploadServiceConfig;
 import br.edu.ifpb.uploadservice.domain.LocalArmazenamento;
 import br.edu.ifpb.uploadservice.domain.ReservaEspaco;
@@ -9,9 +10,12 @@ import br.edu.ifpb.uploadservice.repository.LocalArmazenamentoRepository;
 import br.edu.ifpb.uploadservice.repository.ReservaEspacoRepository;
 import br.edu.ifpb.uploadservice.service.erros.NenhumaUnidadeComEspacoDisponivelException;
 import br.edu.ifpb.uploadservice.service.erros.StatusDeReservaInvalido;
+import io.eventuate.tram.events.publisher.DomainEventPublisher;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -29,12 +33,20 @@ public class ReservaEspacoService {
 
     private final LocalArmazenamentoService localArmazenamentoService;
 
-    public ReservaEspacoService(ReservaEspacoRepository reservaEspacoRepository, LocalArmazenamentoRepository localArmazenamentoRepository, UploadServiceConfig uploadServiceConfig, TaskScheduler taskScheduler, LocalArmazenamentoService localArmazenamentoService) {
+    @Autowired
+    private DomainEventPublisher domainEventPublisher;
+
+    public ReservaEspacoService(ReservaEspacoRepository reservaEspacoRepository,
+                                LocalArmazenamentoRepository localArmazenamentoRepository,
+                                UploadServiceConfig uploadServiceConfig, TaskScheduler taskScheduler,
+                                LocalArmazenamentoService localArmazenamentoService,
+                                DomainEventPublisher domainEventPublisher) {
         this.reservaEspacoRepository = reservaEspacoRepository;
         this.localArmazenamentoRepository = localArmazenamentoRepository;
         this.uploadServiceConfig = uploadServiceConfig;
         this.taskScheduler = taskScheduler;
         this.localArmazenamentoService = localArmazenamentoService;
+        this.domainEventPublisher = domainEventPublisher;
     }
 
     public ReservaEspaco efetuarReservaDeEspaco(Long tamanhoDoArquivo) throws NenhumaUnidadeComEspacoDisponivelException {
@@ -46,6 +58,13 @@ public class ReservaEspacoService {
         reservaEspaco.setExpiracao(calcularDataExpiracao(reservaEspaco.getCriacao()));
         LocalArmazenamento localArmazenamento = definirLocalArmazenamento(tamanhoDoArquivo).
                 orElseThrow(() -> new NenhumaUnidadeComEspacoDisponivelException(String.format("Não há nenhuma unidade disponível para reservar %d bytes", tamanhoDoArquivo)));
+
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         reservaEspacoRepository.save(reservaEspaco);
 
         localArmazenamento.setEspacoReservado(localArmazenamento.getEspacoReservado() + reservaEspaco.getBytesReservados());
@@ -100,5 +119,10 @@ public class ReservaEspacoService {
         return localArmazenamentoRepository.findPrimeiroLocalArmazenamentoDisponivel(tamanhoDoArquivo);
     }
 
+    public void reservaExpiradaEvent(ReservaEspaco reservaEspaco) {
+        ReservaEspacoExpirada reservaEspacoExpirada = new ReservaEspacoExpirada(reservaEspaco.getCodigoReserva());
+        domainEventPublisher.publish("ReservaEspaco", "ReservaEspaco-"+reservaEspacoExpirada.getCodigoReserva(),
+                Collections.singletonList(reservaEspacoExpirada));
+    }
 
 }

@@ -7,17 +7,18 @@ public class ReservaEspacoExpirada implements DomainEvent {
     public ReservaEspacoExpirada() {
     }
 
-    public ReservaEspacoExpirada(Long conteudoId) {
-        this.conteudoId = conteudoId;
+    public ReservaEspacoExpirada(String codigoReserva) {
+        this.codigoReserva = codigoReserva;
     }
 
-    private Long conteudoId;
+    private String codigoReserva;
 
-    public Long getConteudoId() {
-        return conteudoId;
+    public String getCodigoReserva() {
+        return codigoReserva;
     }
 
-    public void setConteudoId(Long conteudoId) {
-        this.conteudoId = conteudoId;
+    public void setCodigoReserva(String codigoReserva) {
+        this.codigoReserva = codigoReserva;
     }
+
 }

@@ -56,11 +56,15 @@ public class ConteudoService {
 
     @Transactional
     public Conteudo atualizarConteudo(Conteudo conteudo) {
-        return conteudoRepository.save(conteudo);
+       return conteudoRepository.save(conteudo);
     }
 
     public Optional<Conteudo> recuperarConteudo(Long id) {
         return conteudoRepository.findById(id);
+    }
+
+    public Optional<Conteudo> recuperarConteudo(String codigoReserva) {
+        return conteudoRepository.findConteudoByCodigoReserva(codigoReserva);
     }
 
     public List<Conteudo> listarConteudos() {

@@ -41,7 +41,7 @@ public class ReservaEspacoEventHandler {
     }
 
     public void tratarReservaExpirada(DomainEventEnvelope<ReservaEspacoExpirada> event) {
-        conteudoService.recuperarConteudo(event.getEvent().getConteudoId()).ifPresent((conteudo) -> {
+        conteudoService.recuperarConteudo(event.getEvent().getCodigoReserva()).ifPresent((conteudo) -> {
             conteudo.setStatus(Conteudo.ConteudoStatus.NEGADO);
             conteudoService.atualizarConteudo(conteudo);
         });

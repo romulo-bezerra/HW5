@@ -35,5 +35,6 @@ public class RemocaoReservaExpirada implements Runnable {
         reservaEspaco.setStatus(ReservaEspaco.ReservaEspacoStatus.EXPIRADA);
         reservaEspacoService.atualizarReserva(reservaEspaco);
         log.info("Reserva do token {} expirada! ", reservaEspaco.getCodigoReserva());
+        reservaEspacoService.reservaExpiradaEvent(reservaEspaco);
     }
 }
