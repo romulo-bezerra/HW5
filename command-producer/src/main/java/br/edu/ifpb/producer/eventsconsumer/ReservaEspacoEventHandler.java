@@ -3,6 +3,7 @@ package br.edu.ifpb.producer.eventsconsumer;
 import br.edu.ifpb.producer.domain.Conteudo;
 import br.edu.ifpb.producer.events.ConteudoCriado;
 import br.edu.ifpb.producer.events.ReservaEspacoEfetuada;
+import br.edu.ifpb.producer.events.ReservaEspacoExpirada;
 import br.edu.ifpb.producer.events.ReservaEspacoNegada;
 import br.edu.ifpb.producer.service.ConteudoService;
 import io.eventuate.tram.events.subscriber.DomainEventEnvelope;
@@ -20,6 +21,7 @@ public class ReservaEspacoEventHandler {
                 .forAggregateType("ReservaEspaco")
                 .onEvent(ReservaEspacoEfetuada.class, this::tratarReservaEfetuada)
                 .onEvent(ReservaEspacoNegada.class, this::tratarReservaNegada)
+                .onEvent(ReservaEspacoExpirada.class, this::tratarReservaExpirada)
                 .build();
     }
 
@@ -38,4 +40,10 @@ public class ReservaEspacoEventHandler {
         });
     }
 
+    public void tratarReservaExpirada(DomainEventEnvelope<ReservaEspacoExpirada> event) {
+        conteudoService.recuperarConteudo(event.getEvent().getConteudoId()).ifPresent((conteudo) -> {
+            conteudo.setStatus(Conteudo.ConteudoStatus.NEGADO);
+            conteudoService.atualizarConteudo(conteudo);
+        });
+    }
 }
