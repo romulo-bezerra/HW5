@@ -60,7 +60,7 @@ public class ReservaEspacoService {
                 orElseThrow(() -> new NenhumaUnidadeComEspacoDisponivelException(String.format("Não há nenhuma unidade disponível para reservar %d bytes", tamanhoDoArquivo)));
 
         try {
-            Thread.sleep(60000);
+            Thread.sleep(59000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

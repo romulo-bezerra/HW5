@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31eb3b16-a0e6-4157-bab0-a640e45d809d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UploadService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UploadService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/producer/events/ReservaEspacoExpirada.java" beforeDir="false" afterPath="$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/producer/events/ReservaEspacoExpirada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/job/RemocaoReservaExpirada.java" beforeDir="false" afterPath="$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/job/RemocaoReservaExpirada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/events/ReservaEspacoExpirada.java" beforeDir="false" afterPath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/events/ReservaEspacoExpirada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/eventsconsumer/ReservaEspacoEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/eventsconsumer/ReservaEspacoEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/repository/ConteudoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/repository/ConteudoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/service/ConteudoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/service/ConteudoService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/UploadService/target/" />
     <ignored path="$PROJECT_DIR$/command-producer/target/" />
@@ -23,44 +16,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RemocaoReservaExpirada.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/job/RemocaoReservaExpirada.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReservaEspacoService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReservaEspacoService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="121" column="35" lean-forward="true" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
+            <state relative-caret-position="285">
+              <caret line="67" column="15" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReservaEspacoEventHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/eventsconsumer/ReservaEspacoEventHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="45" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConteudoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/service/ConteudoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-              <folding>
-                <element signature="e#2294#2295#0" expanded="true" />
-                <element signature="e#2357#2358#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,7 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,52 +103,64 @@
             <path>
               <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
               <item name="HW5" type="462c0819:PsiDirectoryNode" />
-              <item name="command-producer" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
               <item name="HW5" type="462c0819:PsiDirectoryNode" />
-              <item name="command-producer" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
               <item name="HW5" type="462c0819:PsiDirectoryNode" />
-              <item name="command-producer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HW5" type="462c0819:PsiDirectoryNode" />
-              <item name="command-producer" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
               <item name="HW5" type="462c0819:PsiDirectoryNode" />
-              <item name="command-producer" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="producer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
               <item name="HW5" type="462c0819:PsiDirectoryNode" />
-              <item name="command-producer" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="producer" type="462c0819:PsiDirectoryNode" />
-              <item name="eventsconsumer" type="462c0819:PsiDirectoryNode" />
+              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW5" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
+              <item name="uploadservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW5" type="462c0819:PsiDirectoryNode" />
+              <item name="UploadService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
+              <item name="uploadservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -227,7 +200,7 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.18881686" />
+    <option name="contentProportion" value="0.1758509" />
   </component>
   <component name="RunManager" selected="Spring Boot.ProducerApplication">
     <configuration default="true" type="Application" factoryName="Application">
@@ -291,12 +264,15 @@
       <updated>1533594280485</updated>
       <workItem from="1533594282661" duration="2213000" />
       <workItem from="1533596836042" duration="13361000" />
-      <workItem from="1533643011288" duration="15028000" />
+      <workItem from="1533643011288" duration="15909000" />
+      <workItem from="1533751916917" duration="798000" />
+      <workItem from="1533772134073" duration="598000" />
+      <workItem from="1533778489604" duration="1035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30602000" />
+    <option name="totallyTimeSpent" value="33914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-11" width="1313" height="780" extended-state="6" />
@@ -304,7 +280,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -316,7 +291,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32917318" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31620553" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33280632" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
@@ -326,6 +301,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -340,6 +316,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/job/RemocaoReservaExpirada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -504,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/domain/Conteudo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/producer/events/ReservaEspacoExpirada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -571,9 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,17 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/service/ConteudoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding>
-            <element signature="e#2294#2295#0" expanded="true" />
-            <element signature="e#2357#2358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/job/RemocaoReservaExpirada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -602,20 +577,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java">
+    <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/domain/Conteudo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="121" column="35" lean-forward="true" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/eventsconsumer/ReservaEspacoEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="45" selection-end-column="56" />
+        <state relative-caret-position="466">
+          <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/command-producer/src/main/java/br/edu/ifpb/producer/service/ConteudoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UploadService/src/main/java/br/edu/ifpb/uploadservice/service/ReservaEspacoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="67" column="15" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
